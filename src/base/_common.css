@@ -1,0 +1,80 @@
+
+/**********************************************************************/
+/*********************** CDIL CUSTOMIZATIONS ***************************/
+/*********************************************************************/
+
+/*****    SHARED THEME STYLES    *****************************************/
+
+/* removes right side gap */
+#kl_wrapper, #kl_wrapper_3, .kl_wrapper, .kl_wrapper_parent {
+  max-width: 1125px;
+}
+
+#kl_wrapper_3.home {
+  max-width: 840px; /* allows display homepage with default with */
+} 
+
+/* on small screens */
+@media (max-width: 400px) {
+  #kl_wrapper_3 {
+    padding: 15px;
+  }
+}
+
+/* default body link color */
+#kl_wrapper_3 a {
+  color: var(--dt-link-on-white);
+}
+
+/* hide deprecated module navigation sidebar  */
+.kl_book_nav,
+.kl_book_trigger {
+  display:none; 
+}
+
+/* height 0 to keep this from adding extra pdding when custom css is on */
+#kl_custom_css {
+  height:0;
+}
+
+/* float right text/number by default */
+#kl_wrapper_3 #kl_banner_left {
+  float:right;
+}
+
+/* constrain video width on narrow screens */
+@media (max-width: 400px) {
+  #kl_wrapper_3 iframe[allowfullscreen="allowfullscreen"] {
+    width: 400px !important;
+    height: 225px !important; } 
+}
+
+#kl_wrapper_3.kl_generic h3:not(.ui-state-default).kl_message_heading i {
+  background:none;
+}
+
+#kl_wrapper_3 .video-placeholder {
+  width: 720px;
+  height: 405px;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding-top: 160px;
+  font-size: 2em;
+}
+
+  /* add some margin after the last div on a page */
+#kl_wrapper_3>div:last-of-type {
+  margin-bottom: 20px;
+}
+
+/* lists*/
+
+#kl_wrapper_3 h3 + :is(ol, ul) {
+  padding-top: .5rem;
+}
+
+#kl_wrapper_3 li {
+  padding-bottom: .25rem;
+}
+

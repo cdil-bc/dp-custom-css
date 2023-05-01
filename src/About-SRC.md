@@ -1,1 +1,1 @@
-These are where your source files will go.
+This is where your source files go. They get compiled to the build folder when you run the npm scripts (npm run build)

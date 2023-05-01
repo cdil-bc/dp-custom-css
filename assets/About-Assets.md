@@ -1,0 +1,1 @@
+Directory for tracking assets such as background images and and logos used in themes. 

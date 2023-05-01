@@ -1,2 +1,15 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+.DS_Store
+node_modules
+package-lock.json
+src/.DS_Store
+
+package-lock.json
+build/canvas-global-style-desktop.css
+build/canvas-global-style-mobile.css
+build/style-catalog-cte-desktop.css
+build/style-catalog-cte-mobile.css
 
 _gsdata_/*

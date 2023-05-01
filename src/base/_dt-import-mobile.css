@@ -1,0 +1,11 @@
+/*! MOBILE Catalog Hotfix 11-23-2022 */
+
+/*********************************************************************/
+/***** DESIGN TOOLS CORE THEME IMPORT ********************************/
+/*********************************************************************/
+/* Import statements need to be at the top of your CSS file */
+/* For Main CSS file */
+/*@import url(https://designtools.ciditools.com/css/themes.css);*/
+/* For Mobile app CSS file */
+@import url(https://designtools.ciditools.com/css/app.css);
+/*********************************************************************/

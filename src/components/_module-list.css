@@ -1,0 +1,714 @@
+/* Warning on Module List telling people not to edit it directly  */
+.mce-content-body #kl_modules {
+  position:relative;
+}
+
+.mce-content-body #kl_modules:after {
+  content:"NOTE: The module list is not meant to be edited directly here. Use Design Tools to update instead. Please contact CDIL if you need instructions (cdil-inbox@bc.edu).";
+  position: absolute;
+  top: 0;
+  right:0; 
+  display:block;
+  width: 250px;
+  font-size: 14px;
+  margin: 0 5px 0 0;
+  background: #b45f06;
+  font-size: 12px;
+  padding: 4px 5px;
+  color: #fff;
+  z-index: 1;
+}
+
+/* Course Modules Block Heading - remove underline since there's already a border at the top of the homepage module list  */
+#kl_wrapper_3 #kl_course_modules h3,
+#kl_wrapper_3 #kl_course_modules > h3:not(.ui-state-default):after {
+  border: none !important;
+}
+
+#kl_wrapper_3>div .kl_message_block h3 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Homepage Module Lists Icons Controls */
+
+#kl_wrapper_3 #kl_modules > ul li i.fas.fa-minus-square { /* removes icon */
+  display:none;
+} 
+
+
+#kl_wrapper_3 #kl_modules > ul li a i.far.fa-arrow-alt-circle-right:before {
+  display:none; /* creates indent by hiding icon but keeping space */
+}
+
+/* Fixing missing styles for font-awesome icons */
+#kl_wrapper_3 #kl_modules > ul li i[class^=fa-]:before,
+#kl_wrapper_3 #kl_modules > ul li i[class*=fa-]:before {
+    display: inline-block;
+    width: 25px;
+    text-align: center
+}
+
+/* COMPONENT: Home-page Module List - Single Column  */
+
+#kl_modules.kl_modules_columns_1 {
+  padding-top: 20px;
+  margin-top:0;
+}
+
+#kl_modules.kl_modules_columns_1 > ul {
+  margin-left: 0;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_columns_1 > ul li {
+  font-size: 1rem;
+  padding-bottom: 8px;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_columns_1 > ul li a,
+#kl_wrapper_3 #kl_modules.kl_modules_columns_1 > ul li a:active,
+#kl_wrapper_3 #kl_modules.kl_modules_columns_1 > ul li a:visited {
+  color:var(--dt-link-on-white);
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_columns_1 > ul li.kl_current a {
+  font-weight: 700;
+  display: block;
+  padding: 5px 5px 3px 2px;
+  text-decoration: none;
+  border-radius: 3px;
+  color:var(--dt-contrast-on-primary);
+  background: var(--dt-primary);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2);
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_columns_1 .kl_current:not(.ui-tabs-active)::before {
+  float: right;
+  padding: 5px 10px 5px 5px;
+  content: '- current - ';
+  color: #fff;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_columns_1 > ul li.kl_current a:hover {
+  color: #000;
+  background: #bc9b6a;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_columns_1 .kl_current:not(.ui-tabs-active) i {
+  color: #fff;
+}
+
+
+/* COMPONENT: Vertical module tabs - "Include Quick Links - All" */
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed {
+  display: flex;
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  border: 1px solid #000 !important;
+  border-top: 8px solid var(--dt-primary) !important;
+  align-items: stretch;
+  border-radius: 1px;
+  background-color: #fff !important /* themes-payload */;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .kl_module_details {
+  padding: 8px 10px 10px 5px;
+  border: none;
+  background: none;
+}
+
+/* left pane */
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed > ul.ui-tabs-nav {
+  width: 50%;
+  display:block;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .ui-state-active,
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .ui-state-hover {
+  width: calc(100% + 1px);
+}
+
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed > ul.ui-tabs-nav li {
+  display: block;
+  overflow: visible;
+  margin: 0;
+  white-space: normal;
+  border-right: none;
+  border-radius: 0;
+  background: none;
+  position: relative;
+  width: calc(100% + 1px);
+  padding: 4px 0 4px 20px;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed>ul li:first-of-type {
+  padding-top: 20px;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed>ul li:last-of-type {
+  padding-bottom: 20px;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed > ul li.ui-tabs-active {
+  padding-left: 20px;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed > ul.ui-tabs-nav li a {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+  float: none;
+  text-decoration: none;
+  border: none;
+  border-radius: 0;
+  width: 100% !important; /* keep left tabs from wrapping */
+  margin-left: 0;
+  padding: 5px 20px 5px 5px;
+  color: var(--dt-primary) !important
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed:not(.kl_vertical_progress) > ul.ui-tabs-nav li a {
+  display: flex;
+  align-items: center;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed > ul.ui-tabs-nav li a:focus, 
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed > ul.ui-tabs-nav li a:hover {
+    background:none;
+    text-decoration: underline;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed ul.ui-tabs-nav li.ui-tabs-active a {
+  display: block;
+  width: 100% !important;
+  margin: 0;
+  color: #030303 !important;
+  background: #fff !important;
+  border: 1px solid #000;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-right: none;
+  text-indent: 0;
+  margin-left: 0;
+  padding-right: 10px;
+  padding-left: 5px;
+  color: #000 !important;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed:not(.kl_vertical_progress) > ul.ui-tabs-nav li.ui-tabs-active a {
+  display: flex;
+  align-items: center;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_modules_columns_1 > ul li.kl_current a {
+  box-shadow:none;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed ul.ui-tabs-nav li.ui-state-hover a:hover {
+  text-decoration:underline;
+  background-color:transparent;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed>ul.ui-tabs-nav {
+  width: auto;
+  min-width: 60%;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed>ul.ui-tabs-nav li.ui-tabs-active a:focus {
+  text-decoration: none;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .ui-tabs-nav .ui-state-focus,
+#kl_modules.kl_modules_tabbed .kl_panel_content:focus {
+    box-shadow: none;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed > ul.ui-tabs-nav li:first-child {
+  margin-top: -1px;
+  border-top: none;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed>ul.ui-tabs-nav li i {
+  left: 36px;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed>ul.ui-tabs-nav li a:hover i {
+  text-decoration:none;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed:not(.kl_vertical_progress)>ul.ui-tabs-nav li i {
+  left: 36px;
+  height: 16px;    
+  display:flex;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed:not(.kl_vertical_progress)>ul.ui-tabs-nav li i.icon-unpublish {
+  color: gray;
+  margin-left: .5rem;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed>ul li.ui-tabs-active i {
+  left: 0;
+}
+
+/* right pane */
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .ig-list {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .ig-list.items:before {
+  content: "In this Module";
+  padding-top: 5px;
+  display: block;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+  margin-left:-15px;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .ig-list.ui-tabs-panel {
+  width: auto;
+  min-width: 40%;
+  margin-left: 0;
+  padding-left: 35px;
+  padding-top: 5px;
+  padding-bottom: 0;
+  border: none;
+  border-left: 1px solid #000;
+  background: #fff !important;
+  border-radius: 0px;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .ig-list .ig-header {
+  /* visually hidden but accessible to screen readers  */
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  transform: translatez(0);
+  border: 0;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .ig-list .context_module_item.context_module_item_hover,
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .ig-list .context_module_item:hover {
+  background: none;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .ig-list {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .ig-list .ig-row {
+  border: none;
+  padding: 0;
+  margin-left: -22px;
+  background: transparent;
+  align-items: flex-start;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .context_module_item {
+  border:none;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .ig-list .ig-row a.ig-title {
+  font-weight: normal;
+  color: var(--dt-link-on-white);
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .ig-list .ig-row.ig-published:not(.student-view)::before {
+  border: none;
+  background: none;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .context_module_item.context_module_sub_header .locked_title {
+  font-size: 1em;
+}
+
+@media (max-width: 990px) {
+  #kl_wrapper_3 #kl_modules.kl_modules_tabbed > ul.ui-tabs-nav {
+    right: 0;
+    float: none;
+    width: 100%;
+    margin-top: 0;
+    padding: 20px 0 20px 0;
+  }
+  
+  #kl_wrapper_3 #kl_modules.kl_modules_tabbed .ui-widget-content {
+    width: 100%;
+    margin-left: 0;
+  }
+  #kl_wrapper_3 #kl_modules.kl_modules_tabbed > ul.ui-tabs-nav li {
+    border-right: 1px solid #565656;
+  }
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .type_icon i,
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .unpublish-icon {
+  color: var(--dt-primary);
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .icon-publish {
+  display: none;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .kl_module_details .ig-info {
+  margin-right: 0;
+  margin-left: 0px;
+  font-size: 15px;
+  padding-top: 3px;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .kl_module_details .ig-info a {
+  text-decoration: none !important;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 42px;
+  margin-bottom: 0;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .kl_module_details li,
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .kl_module_details .context_module_item.context_module_item_hover {
+  position: relative;
+  background: transparent;
+  margin-bottom: 7px;
+  line-height: 1;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .kl_module_details li:before {
+  background-color: #616161;
+  width: 4px;
+  content: '';
+  position: absolute;
+  top: 18px;
+  bottom: -18px;
+  left: 24px;
+  display: none;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .kl_module_details li:last-of-type::before {
+  display: none;
+}
+
+/* Temp Override */
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .kl_module_details.ig-admin,
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .kl_module_details .module-item-status-icon {
+  display: block;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .kl_module_details .kl_current .module-item-title i {
+  display: none;
+}
+
+
+/*#region ***** COMPONENT: Verical Progress Bar + Tabs ******************************** */
+
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress {
+  border: 1px solid #000 !important;
+  border-top: 8px solid var(--dt-primary) !important;
+  background: #fff !important;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress>ul.ui-tabs-nav {
+  width: auto;
+  min-width: 60%;
+}
+
+/* remove ui-tabs-active so it displays in rich text editor */
+#tinymce #kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress>ul {
+  width: auto;
+  min-width: 60%;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress .ig-list.ui-tabs-panel {
+  width: auto;
+  min-width: 40%;
+  border-left: 1px solid #000;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress>ul li {
+  position: relative;
+  width: calc(100% + 1px);
+  padding: 4px 0 4px 20px;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress>ul li:first-of-type {
+  padding-top: 20px;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress>ul li:last-of-type {
+  padding-bottom: 20px;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress>ul li:after {
+  background-color: var(--dt-primary);
+  width: 8px;
+  content: '';
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 38px;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress>ul li:first-of-type::after {
+  top: 30px;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress>ul li:last-of-type::after {
+  bottom: 27px;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress>ul.ui-tabs-nav li a {
+  text-indent: 0;
+  margin-left: 0;
+  padding: 5px 10px 5px 5px;
+  padding-left: 45px;
+  text-indent: -40px;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress ul.ui-tabs-nav li.ui-tabs-active a {
+  background: #fff !important;
+  border: 1px solid #000;
+  border-right: none;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  color: #000 !important;
+  padding-left: 45px;
+} 
+
+/* fix to make sure all icons are hidden */
+#kl_wrapper_3 #kl_modules.kl_vertical_progress>ul li i,
+#kl_wrapper_3 #kl_modules.kl_vertical_progress>ul li i:before {
+  content: '';
+}
+
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress ul.ui-tabs-nav li i {
+  background-color: var(--dt-primary);
+  height: 30px;
+  width: 30px;
+  border-radius: 25px;
+  left: 2px;
+  z-index: 1;
+  top: 0px;
+  margin-right: 7px;
+  border: 7px solid var(--dt-primary);
+  position: relative;
+}
+
+
+#tinymce #kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress>ul li i {
+  left: 7px;
+  /* so it doesn't look weird in the editor */
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress>ul li.ui-tabs-active i {
+  background-color: #000;
+  border-color: #000;
+  height: 30px;
+  width: 30px;
+  border-radius: 25px;
+  left: 1px;
+}
+
+
+#kl_wrapper_3 #kl_modules.kl_vertical_progress>ul li i,
+#kl_wrapper_3 #kl_modules.kl_vertical_progress>ul li i[class^="icon-"]::before {
+  content: '';
+}
+
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress>ul li a {
+  color: var(--dt-primary) !important;
+  width: 100% !important;
+  display: block;
+  line-height: 16px;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress ul li.ui-tabs-active a {
+  padding-left: 45px;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress .ig-list {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress .ig-list.items:before {
+  content: "In this Module";
+  padding-left: 10px;
+  padding-top: 5px;
+  display: block;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight:bold;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress .ig-list.ui-tabs-panel {
+  background: #fff !important;
+  border-radius: 0px;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress .type_icon i,
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress .unpublish-icon {
+  color: var(--dt-primary);
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress>ul li i.icon-unpublish {
+  display: none;
+}
+
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress .kl_module_details .ig-type-icon i:before {
+  background: #616161;
+  border-radius: 20px;
+  padding: 5px;
+  height: 4px;
+  width: 4px;
+  content: "";
+  margin-top: 2px;
+  display:none;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress .kl_module_details {
+  padding: 8px 10px 10px 5px;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress .kl_module_details .ig-type-icon {
+  display:none;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress .kl_module_details .kl_module_content .ig-list .ig-row {
+  margin-left: -14px;
+  background: transparent;
+  align-items: flex-start;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress .kl_module_details .ig-info {
+  margin-right: 0;
+  margin-left: 0px;
+  font-size: 15px;
+  padding-top: 3px;
+  min-height: 30px;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress .kl_module_details .ig-info a {
+  text-decoration: none !important;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 42px;
+  margin-bottom:0;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress .kl_module_details li,
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress .kl_module_details .context_module_item.context_module_item_hover {
+  position: relative;
+  background: transparent;
+  margin-bottom:3px;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress .kl_module_details li:before {
+  background-color: #616161;
+  width: 4px;
+  content: '';
+  position: absolute;
+  top: 18px;
+  bottom: -18px;
+  left: 24px;
+  display:none;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress .kl_module_details li:last-of-type::before {
+  display: none;
+}
+
+/* temp override */
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress .kl_module_details.ig-admin,
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress .kl_module_details .module-item-status-icon {
+  display: block;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress .kl_module_details .kl_current .module-item-title i {
+  display: none;
+}
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress .kl_module_details .ig-list .ig-row {
+  padding: 0 0 0 10px;
+}
+
+
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress>ul li i.fas.fa-minus-square {
+  /* removes icon but keeps the space*/
+  display: inline-block;
+  visibility: hidden;
+}
+
+/* } */
+/*#endregion*/
+
+
+/*#region ***** temp Fixes ******************************** */
+#kl_wrapper_3 #kl_modules.kl_modules_tabbed .kl_module_details .context_module_sub_header .ig-info a {
+  /* figure out issue with #kl_wrapper_3 #kl_modules.kl_modules_tabbed .ig-list .ig-row a.ig-title in module list (AR III) */
+    display:none; /* showing title link that shouldn't be visible  */
+  }
+  
+  #kl_wrapper_3 #kl_modules.kl_modules_tabbed .context_module_item.context_module_sub_header .locked_title {
+    font-size: 1em;
+    display: inline-block; /* added */
+    padding: 3px 0 5px 7px; /* added */
+  }
+  
+  #kl_wrapper_3 .context_module.locked .context_module_item .title {
+    display:none; /* showing title link that shouldn't be visible  */
+  }
+  
+  #kl_wrapper_3 #kl_modules.kl_modules_tabbed > ul li i.icon-lock {
+    left: -6px;
+    top: 13px;
+  }
+  
+  #kl_wrapper_3 #kl_modules.kl_modules_tabbed > ul li.ui-tabs-active i.icon-lock {
+    left: -11px;
+    top: 14px;
+  }
+  
+  /* icon issue with vertical progress */
+  
+  #kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress > ul li i.icon-lock {
+    left: -138px;
+    top: 4px;
+    background: none;
+    border-color: transparent;
+  }
+  
+  #kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress > ul li i.icon-lock:before {
+    content: "\f023"; /* temp fix for icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold !important;
+  }
+  
+  #kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress > ul li.ui-tabs-active i.icon-lock {
+    left: -143px;
+    top: 4px;
+    background: none;
+    border-color: transparent;
+  }
+  
+  #kl_wrapper_3 #kl_modules.kl_modules_tabbed.kl_vertical_progress .ig-list.items::before {
+    padding-left: 2px;
+  }

@@ -1,0 +1,23 @@
+/* Colors */
+:root {
+/* Base Colors */
+--dt-primary: #56060F;
+--dt-secondary: #8A100B;
+--dt-bright: #b30000; 
+--dt-neutral-dark: #555; 
+--dt-neutral-medium: #656565; 
+--dt-neutral-light: #ccc;
+
+/* Accessible Color Contrast */
+--dt-link-on-white: #56060F; 
+--dt-contrast-on-primary: #fff; 
+--dt-contrast-on-secondary: #fff;
+
+/* alerts */
+--dt-info: #234673;
+--dt-success: #3f5c3d;
+--dt-warning: #b25819;
+--dt-danger: #801D16;
+
+}
+  
