@@ -1,3 +1,9 @@
+/* === Vertical Sidebar Mododule Progress Bar === 
+
+This creates a vertical version of the Module list component that gets positioned as a right sidebar using CSS Grid. It's somewhat experimental and doens't work as well on Canvas content types that already have a right column taking up space. 
+
+*/
+
 /*#region ***** COMPONENT: Module Progress - Sidebar ******************************** */
 
 /*  Grid Layout to enable sidebar layout*/

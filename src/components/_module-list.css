@@ -1,4 +1,10 @@
-/* Warning on Module List telling people not to edit it directly  */
+/* === Vertical Tabs Homepage Module list  === 
+
+Note: this requires having the two columns view and "Include Quick Links - All" enabled in the DesignPlus settings ("Add Advanced Elements > Module List" 
+
+*/
+
+/* Adds warning on Module List telling people not to edit it directly  */
 .mce-content-body #kl_modules {
   position:relative;
 }
