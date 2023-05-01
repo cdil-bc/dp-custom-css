@@ -2,7 +2,7 @@
 
 A framework for managing themes and components for [DesignPLUS by Cidi Labs](https://cidilabs.com/landing/design-tools/)
 
-This is a lightweight build framework for organizing custom css at Boston College. It makes it easier to divide large css files into smaller chunks, and it runs a few scripts to manage everything. 
+This is a lightweight build framework for organizing custom css. It makes it easier to divide large css files into smaller chunks, and it runs a few scripts to manage everything. 
 
 The components directory also has the styles for two components: 
 - [a vertical tabs version of the homepage module list](https://github.com/cdil-bc/dp-custom-css/blob/main/src/components/_module-list.css)
@@ -10,9 +10,9 @@ The components directory also has the styles for two components:
 
 A few people have asked if we could share these after seeing them in the [Boston College Cidilabs Showcase](https://showcase.cidilabs.com/boston-college/), so we're making them available here. 
 
-None of this very currently very well documented or test yet outside of our use internally, but if you're brave and want to try it, let us know how it goes. 
+None of this very currently very well documented or tested outside of our use internally, but if you're brave and want to try it, let us know how it goes. 
 
-Created and maintained by [Tim Lindgren](https://www.bc.edu/content/bc-web/academics/sites/cdil/about/innovation/lindgren.html), Assist Director of Design Innovation in [Center for Digital Innovation in Learning - Boston College](https://www.bc.edu/content/bc-web/academics/sites/cdil.html) at Boston College. 
+Created and maintained by [Tim Lindgren](https://www.bc.edu/content/bc-web/academics/sites/cdil/about/innovation/lindgren.html) in the[Center for Digital Innovation in Learning - Boston College](https://www.bc.edu/content/bc-web/academics/sites/cdil.html) at Boston College. 
 
 --- 
 
