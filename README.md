@@ -1,6 +1,6 @@
 # Custom CSS Toolkit for Canvas and DesignPlus
 
-A framework for managing Canvas themes and components created with [DesignPLUS by Cidi Labs](https://cidilabs.com/landing/design-tools/)
+A framework for managing Canvas themes and components used with [DesignPLUS by Cidi Labs](https://cidilabs.com/landing/design-tools/).
 
 This is a lightweight build framework for organizing custom css at Boston College. It makes it easier to divide large css files into smaller chunks, and it runs a few scripts to manage everything.  
 
