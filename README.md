@@ -14,11 +14,11 @@ Created and maintained by [Tim Lindgren](https://www.bc.edu/content/bc-web/acade
 
 ## How to Use Individual Components
 
-The components directory has the styles for two components: 
+The components directory currently has the styles for two components (more to come): 
 - [a vertical tabs version of the homepage module list](https://github.com/cdil-bc/dp-custom-css/blob/main/src/components/_module-list.css)
 - [a sidebar version of the module progress bar](https://github.com/cdil-bc/dp-custom-css/blob/main/src/components/_progress-sidebar.css) 
 
-
+You can copy the css and include it in your custom css files in Canvas. If you're using it without the framework, there are some css variables that might not work (TODO: check to make sure they all have fallbacks).
 
 ## How To use the Framework
 
