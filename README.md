@@ -1,4 +1,4 @@
-# Custom Canvas CSS Toolkit
+# Custom CSS Toolkit for Canvas and DesignPlus
 
 A framework for managing Canvas themes and components created with [DesignPLUS by Cidi Labs](https://cidilabs.com/landing/design-tools/)
 
