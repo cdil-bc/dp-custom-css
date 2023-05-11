@@ -1,0 +1,271 @@
+ 
+/* Base Banner Component */
+ 
+:root {
+/* Home Banner */
+--home-banner-bg: var(--dt-primary);
+--home-banner-top-padding: var(--s-6) 0 0 0;
+--home-banner-gap: var(--s-4);
+--module-bg-size: auto;
+--home-h2-bg: none; /* not default; used in v2-topbar */ 
+
+/* Homepage Logo */
+--logo-bg: url('https://cte.bc.edu/canvas/themes/bc-general/bc-logo.png') no-repeat left center;
+--logo-visibility: ' '; /* default is content: ' '; hidden is "none" */
+--logo-padding: 0 var(--s-4) 0 var(--s-6);
+
+/* Banner Font-Family */
+--banner-font-family: inherit;
+
+/* Course Title - General */
+--course-title-style: none;
+--course-title-size: var(--text-3xl);
+--course-title-ltr-sp: 1px;
+--course-title-text-shadow: none;
+
+/* Homepage Course Title */
+--homepage-title-padding: var(--s-2) var(--s-6) var(--s-4) var(--s-6);
+
+/* Description Field Order - Home */
+--home-description-order: -1; /* default is used for program info */
+/* other options:
+  - Below site title, usually if used for course info (non-standard): 0; 
+  - If used for logo (non-standard) -2;  
+*/
+
+/* Homepage Course Info Bar (#kl_banner_left) */
+
+/* @info-bar: v1-primary-bg */
+--course-info-bar-padding: var(--s-1) var(--s-6);
+--course-info-bar-bg: var(--dt-primary);
+--course-info-bar-size: var(--text-base);
+--course-info-bar-style: none;
+
+/* @info-bar: v2-transparent (#kl_banner_left) */
+/*
+--course-info-bar-padding: 0 var(--s-5) var(--s-6) var(--s-5);
+--course-info-bar-bg: none; 
+*/
+
+/* Field Positions /*
+/*  
+  - width: auto; field aligns to the right 
+  - width: 100%; field is stacked
+*/
+--home-description-position: 100%; /* field is stacked*/
+--home-subitle-position: 100%; /* field is stacked*/
+--bannerleft-position: 100%; /* field is stacked*/
+
+/*Module Banner Background */
+--module-banner-bg: var(--dt-primary);
+--module-h2-bg: none; /* not typically used */
+
+}
+
+/* @banner-style: v1-full-bg */
+/* 
+- full bg image,
+- logo stacked 
+*/
+#kl_wrapper_3 #kl_banner {
+  position:relative; /* in case anything is absolutely positioned  */
+  display: flex;
+  flex-wrap: wrap;
+  background: var(--module-banner-bg);
+  background-size: var(--module-bg-size);
+  justify-content: space-between;
+  color: var(--dt-contrast-on-primary);
+  border-radius: var(--radius-2);
+  box-shadow: var(--box-shadow-1);
+  overflow:hidden; /* to force child elements to respect border radius */
+  font-family: var(--banner-font-family); 
+}
+
+#kl_wrapper_3:not(.home) #kl_banner {
+  margin-top: var(--s-3);
+}
+
+#kl_wrapper_3.home #kl_banner {
+  background: var(--home-banner-bg);
+  background-size: cover;
+  padding: var(--home-banner-top-padding);
+  gap: var(--home-banner-gap);
+}
+
+/* Logo */
+#kl_wrapper_3.home #kl_banner:before {
+  content: var(--logo-visibility);
+  background: var(--logo-bg);
+  order: -3;
+  width: 100%;
+  max-width: 400px;
+  min-height: 50px;
+  background-size: contain;
+  margin: var(--logo-padding);
+}
+
+#kl_wrapper_3 #kl_banner h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  background: none;
+  gap: var(--s-4);
+  margin: 0; 
+  font-family: var(--banner-font-family); 
+  background: var(--module-h2-bg); 
+}
+
+#kl_wrapper_3.home #kl_banner h2 {
+  background: var(--home-h2-bg);
+  background-size: cover;
+}
+
+#kl_wrapper_3 #kl_banner_right {
+  padding: var(--s-5);
+  font-size: var(--text-2xl);
+  color: var(--dt-contrast-on-primary);
+  font-weight: bold;
+  line-height: 1.2;
+  text-transform: var(--course-title-style);
+  letter-spacing: var(--course-title-ltr-sp);
+  text-shadow: var(--course-title-text-shadow);
+}
+
+#kl_wrapper_3.home #kl_banner_right {
+  font-size: var(--course-title-size); 
+  padding: var(--homepage-title-padding);
+  text-transform: var(--course-title-style);
+  letter-spacing: var(--course-title-ltr-sp);
+  font-weight: bold;
+  line-height: 1.2;
+  text-transform: var(--course-title-style);
+  letter-spacing: var(--course-title-ltr-sp);
+  text-shadow: var(--course-title-text-shadow);
+}
+
+#kl_wrapper_3 #kl_banner_left {
+  order: 1;
+  font-size: 1rem;
+  font-weight:bold;
+  padding: 0 var(--s-2) 0 var(--s-2);
+  margin: var(--s-4);
+}
+
+/* Home course-into-bar */
+#kl_wrapper_3.home #kl_banner_left {
+  width: var(--bannerleft-position);
+  background: var(--course-info-bar-bg);
+  padding: var(--course-info-bar-padding);
+  margin:0;
+  text-transform: var(--course-info-bar-style);
+  font-size: var(--course-info-bar-size);
+  font-weight:bold;
+  letter-spacing: 1px;
+}
+
+#kl_wrapper_3 #kl_description:not(.home) {
+  width: 100%;
+  padding: 0 var(--s-5) var(--s-4) var(--s-5);
+  margin-top: calc(var(--s-3) * -1); /* reduce the space between subtitle and page title */
+}
+
+#kl_wrapper_3.home #kl_description {
+  order: var(--home-description-order);
+  width: var(--home-description-position);
+  background: none;
+  align-self: center;
+  padding: 0 var(--s-6);
+  font-weight:bold; 
+  font-size: var(--text-base);
+}
+
+#kl_wrapper_3 .kl_subtitle {
+  order: -1; 
+  width: 100%; /* field is stacked, order on subtitle */
+  margin: 0; /* reset paragraph */
+  background: none;
+  text-transform: uppercase;
+  font-size: var(--text-sm);
+  padding: var(--s-4) var(--s-5) 0 var(--s-5);
+  margin-bottom: calc(var(--s-4) * -1)  /* reduce the space between subtitle and page title*/
+}
+
+#kl_wrapper_3.home .kl_subtitle {
+  /* hide field text if present */
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0 var(--s-6);
+  position: absolute;
+
+  text-transform: none;
+  order: -1;
+  margin: 0; /* reset paragraph */
+  width: 100%; /* field is stacked*/
+  font-weight:bold; 
+  font-size: var(--text-md);
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width:520px) {
+
+  #kl_wrapper_3 #kl_banner {
+    text-align:center;
+    justify-content: center;
+    padding-top: var(--s-4);
+  }
+
+  /* Logo */
+  #kl_wrapper_3.home #kl_banner:before {
+    background-position: center;
+    margin-left: var(--s-3);
+    margin-right: var(--s-3);
+  }
+
+  #kl_wrapper_3 #kl_banner h2 {
+    justify-content: center;
+  }
+
+  #kl_wrapper_3 #kl_wrapper_3:not(.home) #kl_banner_left {
+    width: 100%; /* force it to stack */
+  }
+
+}
+
+/* @banner-style: v2-topbar */
+/* 
+  - solid top bar
+  - bg image on h2 
+  - additions: padding above h2, padding on #kl_banner_right
+*/
+
+/* @banner-style: v3-simple */
+/* 
+  - close to DT default
+  - solid top bar
+  - banner image can be changed with DT
+*/
+
+/* Other variations
+  - logo/text: stacked, text to the right
+  - course info bar: no bg
+ */
+
+/* Uppercase course Title */
+/* 
+font-size: var(--text-2xl);
+text-transform: uppercase; 
+*/
+
+/* Course Info Bar Transparent Background 
+.home #kl_banner_left {
+  width: var(--bannerleft-position);
+  background: none;
+  padding: var(--s-0) var(--s-6) var(--s-4) var(--s-6);
+}
+ */

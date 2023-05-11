@@ -1,0 +1,42 @@
+/*****  CSOM General *****/
+
+#kl_wrapper_3.kl_csom_general {
+  
+/* Base Colors */
+  --dt-primary: #5B1415;
+  --dt-secondary: #524543;
+  --dt-bright: #8a100b;
+  --dt-neutral-dark: #555;
+  --dt-neutral-medium: #656565;
+  --dt-neutral-light: #ccc;
+
+/* Accessible Color Contrast */
+  --dt-link-on-white: #5B1415;
+  --dt-contrast-on-primary: #fff;
+  --dt-contrast-on-secondary: #fff;
+
+/* Banner Background */
+ --home-banner-bg: var(--dt-primary) url('https://cte.bc.edu/canvas/themes/csom/csom-general-bg-1.jpg') no-repeat left top;
+ 
+/* Homepage Logo */
+ --logo-bg: url('https://cte.bc.edu/canvas/themes/csom/csom-logo-gold.png') no-repeat left center;
+
+/* Module Banner Background */
+ --module-banner-bg: var(--dt-primary);
+ 
+ /* Course Title - General */
+--course-title-style: uppercase;
+--course-title-size: var(--text-2xl);
+--course-title-ltr-sp: 1px;
+--course-title-text-shadow: var(--text-shadow-1);
+
+/* Banner Font */
+--banner-font-family: "Open Sans", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+/* === Custom Theme Styles === */
+
+#kl_wrapper_3.kl_csom_general.home #kl_banner #kl_description {
+  display: none;
+}

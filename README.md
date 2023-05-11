@@ -1,32 +1,28 @@
-# Custom CSS Toolkit for Canvas and DesignPlus
+# Canvas Custom CSS Manager
 
-A framework for managing Canvas themes and components used with [DesignPLUS by Cidi Labs](https://cidilabs.com/landing/design-tools/) (not supported by or associated with Cidi Labs). 
+A framework for managing Canvas themes and components when using [DesignPLUS by Cidi Labs](https://cidilabs.com/landing/design-tools/) 
 
-This is a lightweight build framework for organizing custom css at Boston College. It makes it easier to divide large css files into smaller chunks, and it runs a few scripts to manage everything.  
+This is a lightweight build framework for organizing custom css. It makes it easier to divide large css files into smaller chunks, and it runs a few scripts to manage everything. 
 
-The toolkit also contains custom styles for indvidual components, since a few people have asked for them after viewing [Boston College Cidilabs Showcase](https://showcase.cidilabs.com/boston-college/). 
-
-None of this currently very well documented yet or tested for use outside of Boston College, but if you're brave and want to try it, let us know how it goes. 
-
-Created and maintained by [Tim Lindgren](https://www.bc.edu/content/bc-web/academics/sites/cdil/about/innovation/lindgren.html) in the [Center for Digital Innovation in Learning](https://www.bc.edu/content/bc-web/academics/sites/cdil.html) at Boston College. 
-
-
-
-## How to Use Individual Components
-
-The components directory currently has the styles for two components (more to come): 
+The components directory also has the styles for two components: 
 - [a vertical tabs version of the homepage module list](https://github.com/cdil-bc/dp-custom-css/blob/main/src/components/_module-list.css)
 - [a sidebar version of the module progress bar](https://github.com/cdil-bc/dp-custom-css/blob/main/src/components/_progress-sidebar.css) 
+ 
+A few people have asked if we could share these after seeing them in the [Boston College Cidilabs Showcase](https://showcase.cidilabs.com/boston-college/), so we're making them available here. 
 
-You can copy the css and include it in your custom css files in Canvas. If you're using it without the framework, there are some css variables that might not work (TODO: check to make sure they all have fallbacks).
+None of this very currently very well documented or tested outside of our use internally, but if you're brave and want to try it, let us know how it goes. 
 
-## How To use the Framework
+Created and maintained by [Tim Lindgren](https://www.bc.edu/content/bc-web/academics/sites/cdil/about/innovation/lindgren.html) in the[Center for Digital Innovation in Learning - Boston College](https://www.bc.edu/content/bc-web/academics/sites/cdil.html) at Boston College. 
 
-### Clone or Fork the Repo
+--- 
+
+# How To Use 
+
+## Clone or Fork the Repo
 
 Create a local copy for yourself by either cloning the repo or creating a fork (if you want to pull future updates)
 
-### Install
+## Install
 
 To get up and running install the required packages:
 
@@ -34,13 +30,13 @@ To get up and running install the required packages:
 npm install
 ```
 
-### Building
+## Building
 Run to build full css files for releases:
 ```
 npm run build
 ```
 
-### Project Structure
+## Project Structure
 - **assets**: copy of theme assets that are served from http://cte.bc.edu
 - **build**: built versions of the styles; uploaded to Canvas when publishing releases
 - **src**
@@ -58,7 +54,7 @@ Optional:
 - **dev**: styles.css for local development in Canvas sites, as well as other misc experimental stuff
 
 
-### Source for NPM Scripts
+## Source for NPM Scripts
 
 This repo contains the demo code and files that was used to test NPM scripts for the article [Using Npm Scripts as a Build Tool](https://deliciousbrains.com/npm-build-script/) on [deliciousbrains.com](https://deliciousbrains.com).
 
