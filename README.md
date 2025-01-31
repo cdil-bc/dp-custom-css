@@ -1,5 +1,7 @@
 # Canvas Custom CSS Manager
 
+NOTE: This reposistory only works with the first version of DesignPLUS - it hasn't yet been updated for the new version. 
+
 A framework for managing Canvas themes and components when using [DesignPLUS by Cidi Labs](https://cidilabs.com/landing/design-tools/) 
 
 This is a lightweight build framework for organizing custom css. It makes it easier to divide large css files into smaller chunks, and it runs a few scripts to manage everything. 
